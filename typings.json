@@ -1,0 +1,13 @@
+{
+  "globalDependencies": {
+    "jQuery": "registry:dt/jquery#1.10.0+20170310222111"
+  },
+   "plugins": {[
+
+      "jQuery": 'jquery',
+      "$": 'jquery',
+      "jquery": 'jquery'
+    ]
+    }
+}
+

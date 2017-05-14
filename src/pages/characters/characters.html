@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle="left">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> characters </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  padding>
+  
+
+
+
+  <ion-list reorder="true" (ionItemReorder)="reoderItem($event)" >
+    <ion-item-sliding  *ngFor="let character of characters " #item>
+       <ion-item (click)="goTo(character)">
+        
+              {{ character.name}}
+
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="removeCharacter(character)"><ion-icon name="trash" item-left></ion-icon></button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
+
+
+ <ion-fab right bottom>
+   <button ion-fab (click)='pushCharacter()' ><ion-icon name="add"></ion-icon></button>
+ </ion-fab>
+  
+</ion-content>
